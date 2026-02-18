@@ -438,6 +438,15 @@ Int_t extract_channel(TString infilename, Int_t targetChNo, TString outfilename 
     return 0;
 }
 
+void ForExtract_Channel(TString infilename, Int_t max, Int_t min = 1)
+{
+    for (int i=min; i<=max; i++)
+    {
+        extract_channel(infilename, i);
+        cout << "Outputed : Channel " << i << endl;
+    }
+}
+
 Int_t main(Int_t argc,Char_t **argv){
     // integral range of pulse shape
     const Double_t ADC_MIN  = 0;   // ns, from StartTime
@@ -462,3 +471,4 @@ Int_t main(Int_t argc,Char_t **argv){
     extract_channel(exfin_name,targetchannel);
     cout << endl << "Finished extract ch" << targetchannel << endl;
 }
+
