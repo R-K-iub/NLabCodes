@@ -11,7 +11,7 @@
 #include "TApplication.h"
 #include "TStyle.h"
 #include "TDirectory.h"
-#include "/home/kinoshita/hm_includes/KR_math.cc"
+#include "/home/xxxxxxxxx/KR_math.cc"
 
 #define RECORD_PULSE_SHAPE 1
 #define BIN_NANOSEC 2
@@ -480,4 +480,5 @@ Int_t main(Int_t argc,Char_t **argv){
     //TString exfout_name = Form("%s%.0lf_root_%d_test%d_Cs_%.0lf_xxx.root",foldername.Data(),ADCtail_MIN,date,testNo,ADC_MAX);
     ForExtract_Channel(exfin_name, 8);
     cout << endl << "Finished extract ch" << endl;
+
 }
